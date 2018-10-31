@@ -1,0 +1,21 @@
+How to use Github : 
+
+Base guide : 
+http://rogerdudler.github.io/git-guide/index.fr.html
+
+Link to remote repostiery :
+git remote add origin remote repository URL
+# Sets the new remote
+git remote -v
+# Verifies the new remote URL
+
+
+Base command : 
+git add <addfile>
+git commit -m "message"
+git push origin master
+
+git pull (pour récuérer les fichiers)
+
+How to delete filename :
+https://itextpdf.com/blog/how-completely-remove-file-git-repository
