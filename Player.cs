@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
 	Vector3 movement;
 	Rigidbody playerRigidbody;
 
+	public float sensitivity = 5f; 
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -42,8 +44,11 @@ public class Player : MonoBehaviour
 		movement = movement.normalized * speed * Time.deltaTime;
 		playerRigidbody.MovePosition (transform.position + movement);
 
-		Vector3 x = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		x.z = 0;
-		transform.up = x - transform.position;
+		// Vector3 x = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		// x.z = 0;
+		// transform.up = x - transform.position;
+		float xRot = Input.GetAxisRaw("Mouse X");
+		Vector3 _rotation = new Vector3 (0, 0, xRot) * sensitivity;
+		playerRigidbody.MoveRotation (playerRigidbody.rotation * Quaternion.Euler (_rotation)); 
 	}
 }
