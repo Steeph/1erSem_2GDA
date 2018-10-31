@@ -1,0 +1,36 @@
+How to use Github : 
+
+Base guide : 
+http://rogerdudler.github.io/git-guide/index.fr.html
+
+Link to remote repostiery :
+$git remote add origin remote repository URL
+# Sets the new remote
+$git remote -v
+# Verifies the new remote URL
+
+
+Base command : 
+$git add <addfile>
+$git commit -m "message"
+$git push origin master
+
+$git pull (pour récuérer les fichiers)
+
+How to delete filename :
+https://itextpdf.com/blog/how-completely-remove-file-git-repository
+
+
+---------------------
+Get started :
+Télécharger Git
+Aller dans le dossier que l'on souhaite partager
+Clique droit -> GitBash here
+écrire les commandes suivantes
+
+$git init (set up le dossier)
+$ git add * (ajouter tous les fichiers présents dans le dossier à git)
+$ git commit -m "First commit" (Prépare les fichiers à être envoyés)
+$ git remote add origin https://github.com/Steeph/1erSem_2GDA.git (ajoute le repositery principal (origin) au dossier, ils sont connectés)
+$ git remote -v (permet de vérifier si la connection est établie)
+$ git push origin master (envoie les fichiers dans les commits)
